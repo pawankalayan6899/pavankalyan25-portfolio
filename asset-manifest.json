@@ -1,19 +1,24 @@
 {
   "files": {
     "main.css": "/pavankalyan25-portfolio/static/css/main.a4e7ea3c.css",
-    "main.js": "/pavankalyan25-portfolio/static/js/main.8a65ae35.js",
+    "main.js": "/pavankalyan25-portfolio/static/js/main.140e6bcd.js",
     "static/js/453.c5b47768.chunk.js": "/pavankalyan25-portfolio/static/js/453.c5b47768.chunk.js",
     "static/media/port.png": "/pavankalyan25-portfolio/static/media/port.72d0bbc604d31b2f5ed3.png",
     "static/media/ecommerce.jpg": "/pavankalyan25-portfolio/static/media/ecommerce.d3629b5a5be94586e8f1.jpg",
     "static/media/Pavan_Kalyan_D_Frontend developer_CV.pdf": "/pavankalyan25-portfolio/static/media/Pavan_Kalyan_D_Frontend developer_CV.e5cca4f969e75833ee9c.pdf",
+    "static/media/linux.png": "/pavankalyan25-portfolio/static/media/linux.8537f9061761ab712efe.png",
+    "static/media/js.png": "/pavankalyan25-portfolio/static/media/js.cd882f326c8279cb459d.png",
+    "static/media/html.jpg": "/pavankalyan25-portfolio/static/media/html.61570e97cf6302461487.jpg",
+    "static/media/git.jpg": "/pavankalyan25-portfolio/static/media/git.86eba27a28420fce1ec7.jpg",
     "static/media/task.jpg": "/pavankalyan25-portfolio/static/media/task.d59b602954f063a06ce0.jpg",
+    "static/media/react.webp": "/pavankalyan25-portfolio/static/media/react.dcaf883c6984253b099d.webp",
     "index.html": "/pavankalyan25-portfolio/index.html",
     "main.a4e7ea3c.css.map": "/pavankalyan25-portfolio/static/css/main.a4e7ea3c.css.map",
-    "main.8a65ae35.js.map": "/pavankalyan25-portfolio/static/js/main.8a65ae35.js.map",
+    "main.140e6bcd.js.map": "/pavankalyan25-portfolio/static/js/main.140e6bcd.js.map",
     "453.c5b47768.chunk.js.map": "/pavankalyan25-portfolio/static/js/453.c5b47768.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4e7ea3c.css",
-    "static/js/main.8a65ae35.js"
+    "static/js/main.140e6bcd.js"
   ]
 }
