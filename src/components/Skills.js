@@ -1,20 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import reactImage from '../images/react.webp'; // Adjust the path as needed
+import javascriptImage from '../images/js.png'; // Adjust the path as needed
+import htmlCssImage from '../images/html.jpg'; // Adjust the path as needed
+import gitImage from '../images/git.jpg'; // Adjust the path as needed
+import linuxImage from '../images/linux.png'; // Adjust the path as needed
 import './Skills.css';
 
 const Skills = () => {
   const skills = [
     {
       items: [
-        { name: 'React', image: '/images/skills/react.svg', description: 'Proficient in building interactive UIs with React.' },
-        { name: 'JavaScript', image: '/images/skills/javascript.svg', description: 'Experienced in modern JavaScript development.' },
-        { name: 'HTML/CSS', image: '/images/skills/html-css.svg', description: 'Expert in creating responsive and accessible layouts.' }
+        { name: 'React', image: reactImage, description: 'Proficient in building interactive UIs with React.' },
+        { name: 'JavaScript', image: javascriptImage, description: 'Experienced in modern JavaScript development.' },
+        { name: 'HTML/CSS', image: htmlCssImage, description: 'Expert in creating responsive and accessible layouts.' }
       ]
     },
     {
       items: [
-        { name: 'Git', image: '/images/skills/git.svg', description: 'Skilled in version control using Git.' },
-        { name: 'Linux', image: '/images/skills/linux.svg', description: 'Comfortable with Linux environments for development and deployment.' }
+        { name: 'Git', image: gitImage, description: 'Skilled in version control using Git.' },
+        { name: 'Linux', image: linuxImage, description: 'Comfortable with Linux environments for development and deployment.' }
       ]
     }
   ];
