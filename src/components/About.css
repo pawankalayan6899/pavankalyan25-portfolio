@@ -1,0 +1,85 @@
+.about {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Crucial: Hide overflowing content */
+  font-family: 'Arial', sans-serif; /* A user-friendly font */
+  padding: 50px 0; /* Add some vertical padding */
+}
+
+.about-container {
+  width: 80%; /* Adjust container width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between;
+  position: relative; /* Important for absolutely positioned elements */
+}
+
+.about-text {
+  width: 50%; /* Take up half the width */
+  padding-right: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-image {
+  width: 50%; /* Take up half the width */
+  position: relative;
+}
+
+.image-container {
+  width: 100%;
+  margin: 0 auto; /* Center the image */
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+  border-radius: 8px;
+}
+
+.image-shape {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay */
+  border-radius: 8px;
+  pointer-events: none; /* Ensure it doesn't block clicks */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+}

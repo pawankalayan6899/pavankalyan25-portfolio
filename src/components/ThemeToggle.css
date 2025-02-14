@@ -1,0 +1,45 @@
+.theme-toggle {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dark .theme-toggle {
+  background-color: #333;
+}
+
+.theme-toggle-circle {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .theme-toggle-circle {
+  transform: translateX(1.5rem);
+  background-color: #666;
+}
+
+.theme-icon {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.dark .theme-icon {
+  color: #f0f0f0;
+}

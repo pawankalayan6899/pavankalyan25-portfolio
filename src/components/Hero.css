@@ -1,0 +1,148 @@
+.hero {
+  display: flex; /* Uses flexbox for centering content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+  position: relative; /* Allows absolute positioning of child elements */
+  background: linear-gradient(135deg, #6e7ff3, #8B5CF6); /* Gradient background */
+  color: white; /* Sets text color to white */
+  overflow: hidden; /* Hides any content that overflows the container */
+}
+
+.hero-content {
+  position: relative; /* Allows positioning within the hero */
+  z-index: 2; /* Places the content above the background */
+  text-align: center; /* Centers the text horizontally */
+}
+
+.hero-container {
+  max-width: 600px; /* Limits the maximum width of the container */
+  padding: 20px; /* Adds 20px padding around the content */
+  position: relative; /* Allows positioning within the hero-content */
+  z-index: 2; /* Places the content above the background */
+}
+
+.hero-name {
+  font-size: 3.5rem; /* Sets the font size for the name */
+  font-weight: bold; /* Makes the name text bold */
+  margin-bottom: 10px; /* Adds 10px margin below the name */
+}
+
+.hero-title {
+  font-size: 6rem; /* Sets the font size for the title */
+  margin-bottom: 10px; /* Adds 10px margin below the title */
+  color: #ffffff; /* Sets the text color to white */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adds a shadow to the title */
+}
+
+.hero-subtitle {
+  font-size: 2rem; /* Sets the font size for the subtitle */
+  color: #ffffff; /* Sets the text color to white */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to the subtitle */
+}
+
+.hero-description {
+  font-size: 1rem; /* Sets the font size for the description */
+  margin-bottom: 20px; /* Adds 20px margin below the description */
+  line-height: 1.5; /* Sets the line height for better readability */
+}
+
+.hero-intro {
+  font-size: 2rem; /* Sets the font size for the intro text */
+  color: #ffffff; /* Sets the text color to white */
+  margin: 10px 0; /* Adds 10px margin above and below */
+}
+
+.hero-role {
+  font-size: 2rem; /* Sets the font size for the role */
+  color: #ffffff; /* Sets the text color to white */
+  margin: 10px 0; /* Adds 10px margin above and below */
+  font-weight: bold; /* Makes the role text bold */
+  animation: type 3s steps(30, end); /* Applies the typing animation */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowing text */
+  width: 0; /* Initial width is 0 */
+  animation-fill-mode: forwards; /* Keeps the animation at the final state */
+}
+
+.download-cv {
+  display: inline-block; /* Allows setting width and height */
+  margin: 20px 0; /* Adds 20px margin above and below */
+  padding: 10px 20px; /* Adds padding around the text */
+  background-color: yellow; /* Sets the background color */
+  color: black; /* Sets the text color to white */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Adds rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.download-cv:hover {
+  background-color: dodgerblue; /* Changes background color on hover */
+}
+
+.social-icons {
+  margin-top: 20px; /* Adds 20px margin above the social icons */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers icons horizontally */
+}
+
+/* Styling for individual social icons */
+.social-icons a {
+  margin: 0 10px; /* Adds 10px horizontal margin between the icons */
+  color: yellow; /* Sets the social icon color to gold */
+  text-decoration: none; /* Removes underline from the links */
+  font-size: 2rem; /* Sets the font size for the icons */
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+/* Hover effect for the social icons */
+.social-icons a:hover {
+  transform: scale(1.2); /* Scales up the icon by 20% on hover */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.type-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 3s steps(30, end);
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.three-js-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}

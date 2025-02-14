@@ -1,0 +1,152 @@
+.navbar {
+  position: fixed; /* Keeps the navbar at the top of the screen even when scrolling */
+  top: 0; /* Aligns the navbar to the very top of the viewport */
+  left: 0; /* Aligns the navbar to the left edge of the viewport */
+  right: 0; /* Aligns the navbar to the right edge of the viewport, making it full-width */
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  padding: 1rem; /* Adds 1rem padding on all sides of the navbar content */
+  background: rgba(255, 255, 255, 0.1); /* Light glass effect: semi-transparent white */
+  backdrop-filter: blur(10px); /* Applies a blur effect to the content behind the navbar */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for the glass effect */
+  transition: all 0.3s ease; /* Smooth transition for changes in properties */
+}
+
+.navbar.scrolled {
+  padding: 0.75rem 1rem; /* Reduced top/bottom padding when scrolled */
+  background: rgba(255, 255, 255, 0.2); /* Stronger glass effect when scrolled */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow when scrolled */
+}
+
+.navbar-container {
+  max-width: 1280px; /* Limits the maximum width of the navbar content */
+  margin: 0 auto; /* Centers the content horizontally */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: center; /* Vertically aligns items to the center */
+  padding: 0 1rem; /* Adds 1rem horizontal padding */
+}
+
+.logo {
+  font-size: 1.5rem; /* Sets the font size for the logo */
+  font-weight: bold; /* Makes the logo text bold */
+  text-decoration: none; /* Removes underline from the logo link */
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); /* Applies a linear gradient to the background */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent, revealing the background gradient */
+  position: relative; /* Allows for positioning context */
+}
+
+.desktop-menu {
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Vertically aligns items to the center */
+  gap: 2rem; /* Adds 2rem gap between menu items */
+}
+
+.nav-item {
+  color: var(--text-light); /* Uses a CSS variable for text color in light mode */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: 500; /* Sets a medium font weight */
+  font-size: 1rem; /* Sets the font size */
+  transition: all 0.3s ease; /* Smooth transition for changes in properties */
+  padding: 0.5rem; /* Adds 0.5rem padding around the link */
+  position: relative; /* Allows for positioning context */
+}
+
+.nav-item::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Positions the underline relative to the nav item */
+  bottom: 0; /* Aligns the underline to the bottom */
+  left: 0; /* Aligns the underline to the left */
+  width: 0; /* Initial width is 0 (hidden) */
+  height: 2px; /* Sets the height of the underline */
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); /* Applies the gradient to the underline */
+  transition: width 0.3s ease; /* Smooth transition for the underline width */
+}
+
+.nav-item:hover::after {
+  width: 100%; /* Underline expands to full width on hover */
+}
+
+.mobile-menu-toggle {
+  display: none; /* Hidden by default */
+  align-items: center; /* Vertically aligns items to the center */
+  gap: 1rem; /* Adds 1rem gap between the menu button and any other elements */
+}
+
+.menu-button {
+  background: none; /* Removes background */
+  border: none; /* Removes border */
+  color: var(--text-light); /* Uses CSS variable for color */
+  font-size: 1.5rem; /* Sets the font size */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  padding: 0.5rem; /* Adds padding around the icon */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Vertically aligns items to the center */
+  justify-content: center; /* Horizontally aligns items to the center */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.mobile-menu {
+  position: fixed; /* Stays in place when scrolling */
+  top: 0; /* Aligns to the top of the viewport */
+  left: 0; /* Aligns to the left of the viewport */
+  right: 0; /* Aligns to the right of the viewport */
+  bottom: 0; /* Aligns to the bottom of the viewport, making it full screen */
+  background: rgba(245, 245, 245, 0.98); /* Light mode: softer light gray, very opaque */
+  backdrop-filter: blur(10px); /* Applies a blur effect to the content behind the menu */
+  padding: 5rem 2rem; /* Adds padding to the menu */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  z-index: 998; /* Keeps it above most other content */
+}
+
+.mobile-menu-items {
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks items vertically */
+  gap: 2rem; /* Adds a gap between the items */
+  text-align: center; /* Centers the text */
+}
+
+.mobile-nav-item {
+  color: var(--text-light); /* Uses CSS variable for color */
+  text-decoration: none; /* Removes underline */
+  font-size: 1.5rem; /* Sets the font size */
+  font-weight: 600; /* Sets a bold font weight */
+  transition: all 0.3s ease; /* Adds a transition for hover effects */
+  padding: 0.5rem 1rem; /* Adds padding */
+  border-radius: 0.5rem; /* Adds rounded corners */
+}
+
+.mobile-nav-item:hover {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); /* Applies a gradient on hover */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent, revealing the background gradient */
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none; /* Hides the desktop menu on smaller screens */
+  }
+
+  .mobile-menu-toggle {
+    display: flex; /* Shows the mobile menu toggle button */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem; /* Reduces padding on smaller screens */
+  }
+
+  .logo {
+    font-size: 1.25rem; /* Reduces logo font size on smaller screens */
+  }
+
+  .mobile-nav-item {
+    font-size: 1.25rem; /* Reduces mobile nav item font size on smaller screens */
+  }
+}
